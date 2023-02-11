@@ -1,0 +1,117 @@
+<!----Designing my webpage and interface--...
+let's get started---->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+     <title>Zuru Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="img" href="images">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">FEATURE</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">GALLERY</a></li>
+                <li><a href="">REVIEW</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+        <h1>Zuru Nairobi</h1>
+        <p>Touring Around Nairobi Made Easier<br>Have Your Smartphone Ready? Let's Go</p>
+        <a href="" class="hero-btn">Proceed To Get More Information</a>
+    <div>
+</section>
+
+<!----Attraction Sites-->
+
+<section class="sites">
+    <h1>Attraction Sites Available</h1>
+    <p>What in the fuck is this</p>
+
+</section>
+
+    <div class="row">
+        <div class="site-col">
+            <div class="destination-image"></div>
+            <h1>Nairobi National Park</h1>
+            <p>Kenya's first national park, Nairobi National Park lies only seven kilometers from the skyscrapers of Nairobi's city center. It's a haven for wildlife, the park is also a rhino sanctuary. You can see lions, gazelles, buffaloes, warthogs, cheetahs, zebras, giraffes, and ostriches, and more than 400 species of birds have been recorded in the wetlands.</p>
+        </div>
+        <div class="site-col">
+            <h3>Intermediate</h3>
+            <p>What in the the the fuckkkkkkkkkk fuuuuckkkkkk</p>
+        </div>
+        <div class="site-col">
+            <h3>Intermediate</h3>
+            <p>What in the the the fuckkkkkkkkkk fuuuuckkkkkk</p>
+        </div>
+    </div>
+
+</section>
+
+<a is="action-link" id="file-link" focus-row-control="" focus-type="fileLink" tabindex="0" role="link" href="https://rapidapi.com/apidojo/api/travel-advisor" class="">Travel Advisor API Documentation (apidojo) _ RapidAPI.html</a>
+
+
+
+
+<!----Javascript for Toggle Menu------>
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+// bbcbcbcb //
+import axios from "axios";
+
+const options = {
+  method: 'GET',
+  url: 'https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete',
+  params: {query: 'eiffel tower', lang: 'en_US', units: 'km'},
+  headers: {
+    'X-RapidAPI-Key': 'fc1200d514mshb34ff2f1dcc2a1fp1a67a2jsnd65358bb58f9',
+    'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+
+
+
+
+
+
+
+</script>
+    
+
+
+
+
+
+
+
+
+</body>
+</html>
